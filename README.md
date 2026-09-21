@@ -20,6 +20,12 @@ The agent's escalation rules came out of working through 273 recorded call trans
 
 **matthewsautomation.net**, marketing site built in Astro and Tailwind.
 
+### Work you can read
+
+**[n8n-lead-response](https://github.com/mikematthewsai/n8n-lead-response)**, eleven n8n workflows, 108 nodes, pulled out of a live production install with the credentials stripped. A missed call turns into a text to the customer, a text to the owner and a call that connects the two, then a follow up cadence that stops the moment a person replies. Quote chasing, invoice reminders and a 7am brief sit on top of it.
+
+It ships with the test log rather than a claim: 11 of 13 checks on the core eight passed on the live system with timestamps, and the two that are not fully verified say which inch is unproven and why. Two real bugs turned up while running it, both written up with symptom, cause, fix and re-test. Every push runs a validator that checks the workflows parse, that the node counts in the README match the files, that every data table filter uses a match type n8n accepts, and that no credentials or real numbers are in the repo.
+
 ### Stack
 
 TypeScript, Next.js, React Native and Expo, Supabase and Postgres, Vercel, Twilio, n8n
