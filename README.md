@@ -28,12 +28,13 @@ It ships with the test log rather than a claim. Every check says what passed on 
 
 ![The inbound SMS router, one of the fifteen workflows](https://raw.githubusercontent.com/mikematthewsai/n8n-lead-response/main/docs/images/inbound-sms-router.png)
 
-**[Four standalone SMS templates](https://github.com/mikematthewsai/n8n-lead-response/tree/main/templates)**, each importable on its own with nothing but a Twilio account, and none of them keep their own database:
+**[Five standalone SMS templates](https://github.com/mikematthewsai/n8n-lead-response/tree/main/templates)**, each importable on its own with nothing but a Twilio account, and none of them keep their own database:
 
 - **Quote chaser.** Up to three nudges on an unanswered quote. Before each one it asks Twilio whether the customer has texted in, and stops if they have.
 - **7am owner brief.** One text each morning built from the Twilio message log: texts in, texts out, anything undelivered, and who is still waiting on a reply.
 - **Appointment reminders with quiet hours.** A confirmation and two reminders, with every send time planned the moment the booking arrives so a reminder never lands after the appointment.
 - **STOP, START and HELP alerts.** Tells the owner the moment a customer opts out, and can pass it to a CRM.
+- **Google review request.** One text with the review link after each job, never twice in 90 days and never in quiet hours. Every customer gets the same link, so there is no review gating.
 
 Each one was tested against a real Twilio number, and the README lists every run next to what was not covered. The first is in review for n8n's public template library.
 
