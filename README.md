@@ -26,6 +26,8 @@ The agent's escalation rules came out of working through 273 recorded call trans
 
 It ships with the test log rather than a claim: 11 of 13 checks on the core eight passed on the live system with timestamps, and the two that are not fully verified say which inch is unproven and why. Two real bugs turned up while running it, both written up with symptom, cause, fix and re-test. Every push runs a validator that checks the workflows parse, that the node counts in the README match the files, that every data table filter uses a match type n8n accepts, and that no credentials or real numbers are in the repo.
 
+**[clinic-billing-architecture](https://github.com/mikematthewsai/clinic-billing-architecture)**, how I chose the architecture for a membership billing and reminder system at a small clinic. The client is not named and none of their data is in it. It is the decision itself: what the constraint actually was, the three designs considered, the PHI boundary drawn as diagrams, why the card processor never receives anything that identifies a person, and a vendor table with the date each fact was checked. It includes the assumption I got wrong in August and corrected when I re-checked it.
+
 ### Stack
 
 TypeScript, Next.js, React Native and Expo, Supabase and Postgres, Vercel, Twilio, n8n
