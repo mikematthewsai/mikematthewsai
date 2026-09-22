@@ -35,7 +35,7 @@ It ships with the test log rather than a claim. Every check says what passed on 
 - **Appointment reminders with quiet hours.** A confirmation and two reminders, with every send time planned the moment the booking arrives so a reminder never lands after the appointment.
 - **STOP, START and HELP alerts.** Tells the owner the moment a customer opts out, and can pass it to a CRM.
 - **Google review request.** One text with the review link after each job, never twice in 90 days and never in quiet hours. Every customer gets the same link, so there is no review gating.
-- **Website and line watchdog.** Every 5 minutes it checks that the website loads, the Twilio balance is above a floor, the number still routes calls and texts where it did, and carriers are not blocking its texts. One text when something breaks, one when it recovers, and a short morning check-in so silence means something.
+- **[Website and line watchdog](https://github.com/mikematthewsai/n8n-website-line-watchdog-sms).** Every 5 minutes it checks that the website loads, the Twilio balance is above a floor, the number still routes calls and texts where it did, and carriers are not blocking its texts. One text when something breaks, one when it recovers, and a short morning check-in so silence means something.
 
 Each one was tested against a real Twilio number, and the README lists every run next to what was not covered. The first is in review for n8n's public template library.
 
