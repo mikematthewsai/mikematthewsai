@@ -28,7 +28,7 @@ It ships with the test log rather than a claim. Every check says what passed on 
 
 ![The inbound SMS router, one of the fifteen workflows](https://raw.githubusercontent.com/mikematthewsai/n8n-lead-response/main/docs/images/inbound-sms-router.png)
 
-**[Six standalone SMS templates](https://github.com/mikematthewsai/n8n-lead-response/tree/main/templates)**, each importable on its own with nothing but a Twilio account, and none of them keep their own database:
+**[Seven standalone SMS templates](https://github.com/mikematthewsai/n8n-lead-response/tree/main/templates)**, each importable on its own with nothing but a Twilio account, and none of them keep their own database:
 
 - **Quote chaser.** Up to three nudges on an unanswered quote. Before each one it asks Twilio whether the customer has texted in, and stops if they have.
 - **7am owner brief.** One text each morning built from the Twilio message log: texts in, texts out, anything undelivered, and who is still waiting on a reply.
@@ -36,12 +36,13 @@ It ships with the test log rather than a claim. Every check says what passed on 
 - **STOP, START and HELP alerts.** Tells the owner the moment a customer opts out, and can pass it to a CRM.
 - **Google review request.** One text with the review link after each job, never twice in 90 days and never in quiet hours. Every customer gets the same link, so there is no review gating.
 - **[Website and line watchdog](https://github.com/mikematthewsai/n8n-website-line-watchdog-sms).** Every 5 minutes it checks that the website loads, the Twilio balance is above a floor, the number still routes calls and texts where it did, and carriers are not blocking its texts. One text when something breaks, one when it recovers, and a short morning check-in so silence means something.
+- **[License and insurance renewal reminders](https://github.com/mikematthewsai/n8n-renewal-reminders-sms).** A text before the license, the insurance or the truck tags run out, and every day once they are late. Each line has a Done link that rolls a yearly item to next year, with an Undo on the page it opens.
 
 Each one was tested against a real Twilio number, and the README lists every run next to what was not covered. The first is in review for n8n's public template library.
 
 **[clinic-billing-architecture](https://github.com/mikematthewsai/clinic-billing-architecture)**, how I chose the architecture for a membership billing and reminder system at a small clinic. The client is not named and none of their data is in it. It is the decision itself: what the constraint actually was, the three designs considered, the PHI boundary drawn as diagrams, why the card processor never receives anything that identifies a person, and a vendor table with the date each fact was checked. It includes the assumption I got wrong in August and corrected when I re-checked it.
 
-**Build logs** on [matthewsautomation.net/blog](https://matthewsautomation.net/blog): what broke, why, and how it was fixed, written as it happened. Most recent: [a watchdog for the things that quietly stop your leads](https://matthewsautomation.net/blog/build-log-website-and-line-watchdog) and [four SMS workflows that do not need a database](https://matthewsautomation.net/blog/build-log-four-sms-templates-no-database).
+**Build logs** on [matthewsautomation.net/blog](https://matthewsautomation.net/blog): what broke, why, and how it was fixed, written as it happened. Most recent: [renewal reminders that roll themselves to next year](https://matthewsautomation.net/blog/build-log-renewal-reminders) and [a watchdog for the things that quietly stop your leads](https://matthewsautomation.net/blog/build-log-website-and-line-watchdog).
 
 ### Stack
 
