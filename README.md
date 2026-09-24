@@ -38,7 +38,7 @@ It ships with the test log rather than a claim. Every check says what passed on 
 - **[Website and line watchdog](https://github.com/mikematthewsai/n8n-website-line-watchdog-sms).** Every 5 minutes it checks that the website loads, the Twilio balance is above a floor, the number still routes calls and texts where it did, and carriers are not blocking its texts. One text when something breaks, one when it recovers, and a short morning check-in so silence means something.
 - **[License and insurance renewal reminders](https://github.com/mikematthewsai/n8n-renewal-reminders-sms).** A text before the license, the insurance or the truck tags run out, and every day once they are late. Each line has a Done link that rolls a yearly item to next year, with an Undo on the page it opens.
 
-Each one was tested against a real Twilio number, and the README lists every run next to what was not covered. The first is in review for n8n's public template library.
+Each one was tested against a real Twilio number, and the README lists every run next to what was not covered. The quote chaser is published in [n8n's public template library](https://n8n.io/workflows/19773).
 
 **[clinic-billing-architecture](https://github.com/mikematthewsai/clinic-billing-architecture)**, how I chose the architecture for a membership billing and reminder system at a small clinic. The client is not named and none of their data is in it. It is the decision itself: what the constraint actually was, the three designs considered, the PHI boundary drawn as diagrams, why the card processor never receives anything that identifies a person, and a vendor table with the date each fact was checked. It includes the assumption I got wrong in August and corrected when I re-checked it.
 
